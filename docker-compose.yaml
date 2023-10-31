@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./back
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+    networks:
+      - pesquisaEleitoralNetwork
+  # frontend: #Arrumar frontAINDA
+  #   build:
+  #     dockerfile: Dockerfile
+  #     context: ./frontend
+  #   volumes:
+  #     - /app/node_modules
+  #     - /app/src/styles
+  #     - ./frontend/web:/app
+  #   environment:
+  #     - NODE_ENV=development
+  #     - REACT_APP_DEVELOPMENT_API_ENDPOINT=/devURL
+  pesquisa-user-db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    networks:
+      - pesquisaEleitoralNetwork
+networks:
+  pesquisaEleitoralNetwork:
