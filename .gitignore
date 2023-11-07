@@ -1,38 +1,11 @@
-# compiled output
-back/dist
-back/node_modules
-
 # Logs
-back/logs
-back/*.log
-back/npm-debug.log*
-back/pnpm-debug.log*
-back/yarn-debug.log*
-back/yarn-error.log*
-back/lerna-debug.log*
-
-# OS
-back/.DS_Store
-
-# Tests
-back/coverage
-back/.nyc_output
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -155,32 +128,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-
-## FRONT
-
-# Logs
-front/logs
-front/*.log
-front/npm-debug.log*
-front/yarn-debug.log*
-front/yarn-error.log*
-front/pnpm-debug.log*
-front/lerna-debug.log*
-
-front/node_modules
-front/dist
-front/dist-ssr
-front/*.local
-
-# Editor directories and files
-front/.vscode/*
-front/!.vscode/extensions.json
-front/.idea
-front/.DS_Store
-front/*.suo
-front/*.ntvs*
-front/*.njsproj
-front/*.sln
-front/*.sw?
-
